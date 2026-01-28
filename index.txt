@@ -53,7 +53,7 @@
     // ========================================================================
     
     const API_CONFIG = {
-      URL: "https://script.google.com/macros/s/AKfycbzhfqpeBiSTCwRs3ugTEcqlH96SeVVwSMsYnz7eJReFfd7q-bExURKl6WVFlk57dULPpQ/exec",
+      URL: "https://script.google.com/macros/s/AKfycbydb-gnCEYC9AZMNdyPjqdossWO0B3AFuAMCr3e1qljDtlqAFOWOWsASFFFzraizmS-SA/exec",
       TIMEOUT: 30000,
       RETRY_ATTEMPTS: 3,
       RETRY_DELAY: 2000
@@ -2641,3 +2641,4 @@ const EventosTab = ({ eventos, onAddEvento }) => {
   </script>
 </body>
 </html>
+
