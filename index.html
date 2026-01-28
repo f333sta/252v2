@@ -416,7 +416,8 @@
           setLoading(true);
           
           const produtosData = await API.call('getProdutos');
-          setProdutos(produtosData.produtos || produtosData || []);
+          const lista = produtosData.produtos || produtosData || [];
+          setProdutos(Array.isArray(lista) ? lista : []);
           
           const eventosData = await API.call('getEventoVigente');
           const eventosVigentes = eventosData.eventos || [];
@@ -2395,6 +2396,7 @@ const EventosTab = ({ eventos, onAddEvento }) => {
   </script>
 </body>
 </html>
+
 
 
 
