@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>⚔️ Sistema Eventos 252 ⚔️</title>
 
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -40,6 +42,15 @@
     
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    
+    #root {
+      min-height: 100vh;
+    }
   </style>
 </head>
 <body>
@@ -79,6 +90,7 @@
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: body.toString(),
             signal: controller.signal
+            mode: 'cors'
           });
           
           clearTimeout(timeoutId);
@@ -2637,8 +2649,10 @@ const EventosTab = ({ eventos, onAddEvento }) => {
       return null;
     };
     
-    ReactDOM.render(<App />, document.getElementById("root"));
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
   </script>
 </body>
 </html>
+
 
