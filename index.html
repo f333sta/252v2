@@ -1996,6 +1996,11 @@ const AdicionarProdutoEventoModal = ({ evento, produtosDisponiveis, onClose, onS
       return;
     }
     
+    if (!produto) {
+      setError('Produto não encontrado! Recarregue a página.');
+      return;
+    }
+    
     try {
       setLoading(true);
       
@@ -3030,5 +3035,6 @@ const AdicionarProdutoEventoModal = ({ evento, produtosDisponiveis, onClose, onS
   </script>
 </body>
 </html>
+
 
 
